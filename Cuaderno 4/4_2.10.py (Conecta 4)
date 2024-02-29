@@ -1,0 +1,59 @@
+'''
+Realiza una aplicación que permita comprobar si un tablero de Conecta4 
+(https://es.wikipedia.org/wiki/Conecta_4) ha completado las 4 en raya. La aplicación 
+deberá:
+a. Solicitar datos para un tablero de 7x6
+b. Solicitar introducir valores para representar las fichas del tablero en un 
+momento concreto del juego
+c. Mostrar por pantalla el tablero con los valores introducidos
+d. Indicar si alguna fila, columna o diagonal incluye 4 en raya (4 casillas 
+consecutivas con una ficha de igual color).
+'''
+import random
+letras = ["R", "X", "A"]
+
+tablero = []
+cuentaR = 0
+cuentaA = 0
+
+for i in range (7):
+    fila = []
+    for j in range(6):
+        dato = random.choice(letras)
+        fila.append(dato)
+    tablero.append(fila)
+for i in range(len(tablero)):
+    print(tablero[i])
+
+
+cuentaA = 0
+cuentaR = 0
+#Ver si hay conecta 4 por filas
+for i in range (7):
+    for j in range(5):
+        if tablero[i][j] == "A":
+            cuentaA += 1
+        elif tablero[i][j] == "R":
+            cuentaR += 1
+        elif tablero[i][j] != tablero[i][j+1]:
+            cuentaA = 0
+            cuentaR = 0
+    if cuentaA == 4 or cuentaR == 4:
+        print("¡Conectado en filas!")
+    cuentaA = 0
+    cuentaR = 0
+    
+cuentaR_col = 0
+cuentaA_col = 0
+#Ver si hay conecta 4 por columnas
+for i in range (3):
+    for j in range(6):
+        if tablero[i][j] != tablero[i+1][j] or tablero[i][j] != tablero [i+2][j] or tablero[i][j] != tablero[i+3][j]:
+            cuentaA_col = 0
+            cuentaR_col = 0
+        else:
+            cuentaA_col = 1
+            cuentaR_col = 1
+
+if cuentaA_col == 1 or cuentaR_col == 1:
+    print("¡Conectado en columnas!")

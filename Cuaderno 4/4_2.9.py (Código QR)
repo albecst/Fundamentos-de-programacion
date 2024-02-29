@@ -1,0 +1,24 @@
+'''
+El código QR (abreviatura de Quick Response Code) fue creado en 1994 por una filial 
+japonesa de Toyota que fabrica componentes de automóviles. Estos códigos permiten 
+almacenar información sobre un producto codificándola en un cuadrado de NxN con 
+píxeles que pueden ser blancos o negros. En su formato más pequeño, los códigos tienen 
+21x21 píxeles (versión 1), y en la más grande 177x177 (versión 40). Programe una 
+aplicación que genere aleatoriamente códigos QR versión 1 y los muestre por pantalla 
+utilizando, por ejemplo, asteriscos. Nota: utilice la biblioteca random y la función 
+randint para generar los números aleatorios.
+'''
+import random
+
+CódigoQR = []
+
+for i in range(21):
+    fila = []
+    for j in range (21):
+        x = random.randint(0,1)
+        if x == 0:
+            fila.append(" ")
+        if x == 1:
+            fila.append("#")
+    CódigoQR.append(fila)
+    print(fila)

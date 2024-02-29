@@ -1,0 +1,24 @@
+'''
+Implementa un procedimiento que lea palabras de la entrada estándar hasta que se 
+introduzca “fin” y retorne un diccionario de frecuencias de las longitudes de las palabras
+(palabras de longitud 4: 5, palabras de longitud 6: 3, etc.). Ten en cuenta que no hay 
+límite a la longitud (en caracteres) de las palabras.
+'''
+x = input("Introduce una palabra")
+texto = []
+diccionario = {}
+longitud_de_palabras = []
+
+while x != "fin":
+    texto.append(x)
+    x = input("Introduce una palabra")
+
+for i in range(len(texto)):
+    y = len(texto[i])
+    longitud_de_palabras.append(y)
+    if longitud_de_palabras[i] in diccionario:
+        diccionario[y] += 1
+    else:
+        diccionario[y] = 1  
+
+print("(Número de carácteres: número de palabras)",diccionario)

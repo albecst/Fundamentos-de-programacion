@@ -1,0 +1,35 @@
+'''
+Supón que tenemos 2 diccionarios, uno con la plantilla del FC Barcelona (22 jugadores, 
+parejas “dorsal” y “nombre que aparece en la camiseta”) y otro con las alineaciones de 
+las distintas jornadas de la Liga 2020-2021 (número de jornada y lista de jugadores que 
+jugaron esa jornada). Programa funciones para:
+a. Introducir los datos de una jornada a partir de su número y una lista de 
+jugadores y dorsales. Obviamente no puede repetirse ningún jugador en la 
+alineación ni participar jugadores que no pertenecen a la plantilla del Barcelona 
+FC.
+b. Determinar si un jugador participó o no en una cierta jornada a partir de su 
+dorsal o de su nombre (como se prefiera).
+c. Listar todas las jornadas en que jugó un determinado jugador cuyo dorsal se 
+indica.
+d. Mostrar el nombre del jugador que más partidos jugó en una temporada, 
+indicando el número de partidos que jugó.
+'''
+#Diccionario1 = {23:"Carlos", 11:"Jose", ... XY: " "}
+#Diccionario2 = {2019: ["Carlos, "Jose]...}
+
+lista1 = ["Jose", "Carlos", "Adrián", "Pepe"]
+lista2 = ["Messi", "Cristiano", "Xavi", "Arturo"]
+lista3 = ["Quevedo", "Rodrigo", "Liam", "Bruno"]
+lista4 = ["Samuel", "David", "Alex", "Rafiné"]
+lista5 = ["César, Álvaro, Abel, Javi"]
+lista6 = ["Raúl, Iván"]
+Diccionario1 = {1:"Jose", 2:"Carlos", 3:"Adrián", 4:"Pepe", 5:"Messi", 6:"Cristiano", 7:"Xavi", 8:"Arturo", 9:"Quevedo", 10:"Rodrigo", 11:"Liam", 12:"Bruno", 13:"Samuel", 14:"David", 15:"Alex", 16:"Rafiné", 17:"César", 18:"Álvaro", 19:"Abel", 20:"Javi", 21:"Raúl", 22:"Iván"}
+Diccionario2 = {"J1": lista1, "J2": lista2, "J3":lista3, "J4":lista4, "J5":lista5, "J6":lista6}
+
+#Vamos a ver si Carlos jugó en la jornada x
+if "Carlos" in "J1":
+    print("Si")
+
+
+
+
